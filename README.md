@@ -42,4 +42,4 @@
 
 ---
 
-Collab with @cwills18 && @h-kok.
+Collab with [@cwills18] && [@h-kok].
