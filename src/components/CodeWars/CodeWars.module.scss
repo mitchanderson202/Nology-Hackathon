@@ -1,0 +1,20 @@
+// Font-family:
+$blue: rgb(55, 81, 255);
+$pink: #ed3167;
+$green: #5ce38a;
+$purple: #6201ee;
+
+.CodeWars {
+    border: 2px solid $green;
+    width: 300px;
+    padding: 20px;
+}
+
+.Heading {
+    color: $pink;
+    text-align: center;
+}
+.Para {
+    color: $blue;
+    font-weight: bold;
+}

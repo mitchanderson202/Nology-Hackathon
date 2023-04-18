@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styles from "./CodeWars.module.scss";
 
 const CodeWars = ({ username }) => {
     const [user, setUser] = useState("");
@@ -21,13 +22,19 @@ const CodeWars = ({ username }) => {
     }, [username]);
 
     return (
-        <div>
-            <h1>CodeWars Stats</h1>
+        <div className={styles.CodeWars}>
+            <h1 className={styles.Heading}>CodeWars Stats</h1>
             {user && (
                 <div key={user.id}>
-                    <p>Username: {user.username}</p>
-                    <p>Id: {user.id}</p>
-                    <p>{user.honor}</p>
+                    <p className={styles.Para}>Username: {user.username}</p>
+                    <p className={styles.Para}>
+                        Clan: {user.clan ?? "No clan"}
+                    </p>
+                    <p className={styles.Para}>Id: {user.id}</p>
+                    <p className={styles.Para}>Honor: {user.honor}</p>
+                    <p className={styles.Para}>
+                        Rank: {user?.ranks?.overall?.name ?? "Unknown"}
+                    </p>
                 </div>
             )}
         </div>
