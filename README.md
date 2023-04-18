@@ -2,9 +2,8 @@
 
 
 ## Demo & Snippets
-
--   Include hosted link
--   Include images of app if CLI or Client App
+<img width="1242" alt="dashboard-page" src="https://user-images.githubusercontent.com/78459081/232710776-15cbfb00-0824-4c2a-a264-ead106b1b460.png">
+<img width="1237" alt="data-grid" src="https://user-images.githubusercontent.com/78459081/232710834-3fe507c0-cba5-43c1-b636-938c80971cd8.png">
 
 ---
 
