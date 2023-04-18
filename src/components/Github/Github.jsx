@@ -1,10 +1,9 @@
 import "./Github.scss";
 import { useState, useEffect } from "react";
 
-const Github = () => {
-  const [info, setInfo] = useState([]);
 
-  const username = "mitchanderson202";
+const Github = ({ username }) => {
+  const [info, setInfo] = useState([]);
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${username}/repos`)
@@ -19,16 +18,29 @@ const Github = () => {
   };
 
   return (
-    <div className="Github">
+
+    <div className="Github-Grid">
       {info.map((info) => (
-        <div key={info.id}>
+        <div key={info.id} className="Github">
           <h2>{info.full_name}</h2>
-          <p>Name: {info.name}</p>
-          <p>Url: {info.html_url}</p>
-          <p>Created at: {formatTime(info.created_at)}</p>
-          <p>Pushed at: {formatTime(info.pushed_at)}</p>
-          <p>Updates at: {formatTime(info.updated_at)}</p>
-          <p>Language: {info.language}</p>
+          <p>
+            Name: <strong>{info.name}</strong>
+          </p>
+          <p>
+            Url: <strong>{info.html_url}</strong>
+          </p>
+          <p>
+            Created at: <strong>{formatTime(info.created_at)}</strong>
+          </p>
+          <p>
+            Pushed at: <strong>{formatTime(info.pushed_at)}</strong>
+          </p>
+          <p>
+            Updates at: <strong>{formatTime(info.updated_at)}</strong>
+          </p>
+          <p>
+            Language: <strong>{info.language}</strong>
+          </p>
         </div>
       ))}
     </div>
