@@ -28,10 +28,6 @@ const CodeWars = ({ username }) => {
           <p>Username: {user.username}</p>
           <p>Id: {user.id}</p>
           <p>{user.honor}</p>
-
-          {/* <p>Challenges Completed: {user.codeChallenges.totalCompleted}</p>
-          <p>Rank: {user.ranks.overall.name}</p>
-          <p>Languages: make pie graph</p> */}
         </div>
       )}
     </div>
