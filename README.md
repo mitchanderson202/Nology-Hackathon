@@ -42,6 +42,5 @@
 
 ---
 
-@cwills18
 
-Collab with ([@cwills18] https://github.com/cwills18) && ([@h-kok] https://github.com/h-kok).
+Collab with @cwills18 https://github.com/cwills18 && @h-kok https://github.com/h-kok.
