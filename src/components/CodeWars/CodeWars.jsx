@@ -11,6 +11,7 @@ const CodeWars = ({ username }) => {
         console.log(data, "data");
         return data;
     };
+
     useEffect(() => {
         const wrapper = async () => {
             const data = await getCodeWarsAPI(username);
@@ -18,19 +19,15 @@ const CodeWars = ({ username }) => {
         };
         wrapper();
     }, [username]);
+
     return (
         <div>
             <h1>CodeWars Stats</h1>
-            {username && (
-                <div key={username.id}>
-                    <p>Username: {username.username}</p>
-                    <p>Id: {username.id}</p>
-                    <p>
-                        Challenges Completed:{" "}
-                        {username.codeChallenges.totalCompleted}
-                    </p>
-                    <p>Rank: {username.ranks.overall.name}</p>
-                    <p>Languages: make pie graph</p>
+            {user && (
+                <div key={user.id}>
+                    <p>Username: {user.username}</p>
+                    <p>Id: {user.id}</p>
+                    <p>{user.honor}</p>
                 </div>
             )}
         </div>
