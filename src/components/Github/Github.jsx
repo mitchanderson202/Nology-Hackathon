@@ -1,6 +1,7 @@
 import "./Github.scss";
 import { useState, useEffect } from "react";
 
+
 const Github = ({ username }) => {
   const [info, setInfo] = useState([]);
 
@@ -17,6 +18,7 @@ const Github = ({ username }) => {
   };
 
   return (
+
     <div className="Github-Grid">
       {info.map((info) => (
         <div key={info.id} className="Github">

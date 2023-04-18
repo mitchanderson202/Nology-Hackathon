@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { UserLoginContext } from "../../contexts/UserLoginProvider";
 import { useNavigate } from "react-router";
+import styles from "./HomePage.module.scss";
 
 const HomePage = () => {
 	const defaultValues = {
@@ -30,23 +31,39 @@ const HomePage = () => {
 	};
 
 	return (
-		<div>
-			<h1>Welcome to My Learning Dashboard!</h1>
-			<p>To get started, enter the usernames for any accounts you have below.</p>
-			<form>
-				<div>
-					<label>Codewars:</label>
-					<input type="text" name="codewars" onChange={handleChange} value={formValues.codewars} />
+		<div className={styles.HomePage}>
+			<h1 className={styles.Heading}>Welcome to My Learning Dashboard!</h1>
+			<p className={styles.Para}>To get started, enter the usernames for any accounts you have below.</p>
+			<form className={styles.Form}>
+				<div className={styles.Field}>
+					<label className={styles.Label}>Codewars:</label>
+					<input
+						className={styles.Input}
+						type="text"
+						name="codewars"
+						onChange={handleChange}
+						value={formValues.codewars}
+						required
+					/>
 				</div>
-				<div>
-					<label>Github:</label>
-					<input type="text" name="github" onChange={handleChange} value={formValues.github} />
+				<div className={styles.Field}>
+					<label className={styles.Label}>Github:</label>
+					<input
+						className={styles.Input}
+						type="text"
+						name="github"
+						onChange={handleChange}
+						value={formValues.github}
+						required
+					/>
 				</div>
-				<div>
-					<label>Hacker Rank:</label>
-					<input type="text" name="hacker" onChange={handleChange} value={formValues.hacker} />
+				<div className={styles.Field}>
+					<label className={styles.Label}>Hacker Rank:</label>
+					<input className={styles.Input} type="text" name="hacker" onChange={handleChange} value={formValues.hacker} />
 				</div>
-				<button onClick={handleSubmit}>Get Started!</button>
+				<button className={styles.Button} onClick={handleSubmit}>
+					Get Started!
+				</button>
 			</form>
 		</div>
 	);
