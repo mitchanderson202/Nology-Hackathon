@@ -1,41 +1,11 @@
-
-// import React, { useState, useEffect } from "react";
-
-// const CodeWars = ({ username }) => {
-//     const [user, setUser] = useState("");
-//     const getCodeWarsAPI = async (user) => {
-//         const response = await fetch(
-//             `https://www.codewars.com/api/v1/users/${user}`
-//         );
-//         const data = await response.json();
-//         console.log(data, "data");
-//         return data;
-//     };
-
-//     useEffect(() => {
-//         const wrapper = async () => {
-//             const data = await getCodeWarsAPI(username);
-//             setUser(data);
-//         };
-//         wrapper();
-//     }, [user]);
-
-//     return (
-//         <div>
-//             <h1>CodeWars Stats</h1>
-//             <div>{user.id}</div>
-//         </div>
-//     );
-// };
-
-// export default CodeWars;
-
 import React, { useState, useEffect } from "react";
-const CodeWars = () => {
-    const [username, setUsername] = useState("");
-    const getCodeWarsAPI = async (user) => {
+
+const CodeWars = ({ username }) => {
+    const [user, setUser] = useState("");
+
+    const getCodeWarsAPI = async (username) => {
         const response = await fetch(
-            `https://www.codewars.com/api/v1/users/${user}`
+            `https://www.codewars.com/api/v1/users/${username}`
         );
         const data = await response.json();
         console.log(data, "data");
@@ -43,11 +13,11 @@ const CodeWars = () => {
     };
     useEffect(() => {
         const wrapper = async () => {
-            const data = await getCodeWarsAPI("Magachute");
-            setUsername(data);
+            const data = await getCodeWarsAPI(username);
+            setUser(data);
         };
         wrapper();
-    }, []);
+    }, [username]);
     return (
         <div>
             <h1>CodeWars Stats</h1>
