@@ -1,9 +1,10 @@
-import "./App.css";
+import "./App.scss";
+import Github from "./components/mitchell/Github/Github";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hi</h1>
+      <Github />
     </div>
   );
 }
