@@ -19,6 +19,7 @@
 
 - git clone https://github.com/mitchanderson202/Nology-Hackerthon.git
 - npm i
+- npm run dev
 
 ---
 
